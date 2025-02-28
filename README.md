@@ -1,0 +1,54 @@
+# AI4M Dataset Preprocessing & Testing
+
+## Overview
+This repository contains data preprocessing scripts and unit tests for handling the **AI4M Dataset**. The project includes:
+- **Non-encoded preprocessing**: Filling missing values with statistical measures.
+- **One-hot encoding preprocessing**: Transforming categorical features into numerical format.
+- **Unit tests**: Ensuring correctness of preprocessing steps.
+
+## Features
+- **Handles missing values** (mode for categorical, median for numerical).
+- **Performs one-hot encoding** while managing unknown categories.
+- **Includes unit tests** to validate preprocessing correctness.
+
+## Installation
+To run this project locally, follow these steps:
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
+   cd your-repo
+   ```
+
+2. **Install dependencies**
+   ```bash
+   pip install pandas numpy scikit-learn unittest
+   ```
+
+## Usage
+Run the preprocessing scripts on your dataset:
+```python
+from preprocessing import preprocess_non_encoded, preprocess_one_hot
+import pandas as pd
+
+df = pd.read_csv("AI4M Dataset.csv")
+non_encoded_df = preprocess_non_encoded(df)
+one_hot_df = preprocess_one_hot(df)
+```
+
+## Running Tests
+Ensure that preprocessing functions work correctly:
+```bash
+python -m unittest test_preprocessing.py
+```
+
+## Repository Structure
+```
+├── preprocessing.py        # Preprocessing functions
+├── test_preprocessing.py   # Unit tests for preprocessing
+├── AI4M Dataset.csv        # Sample dataset
+├── README.md               # Project documentation
+```
+
+## Contributing
+Feel free to open an issue or submit a pull request if you have improvements!
